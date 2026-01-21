@@ -1,0 +1,40 @@
+[
+{
+"id":"1",
+"name": "Banana Dream",
+"shape_id": "1",
+"size":60,
+"receipe":[
+    {
+        "ingrediend_id" :"1",
+        "amount":2
+    },{
+        "ingrediend_id" :"2",
+        "amount":3
+    }
+],
+"description":"Canarian Banana and Madagascar Vanilla",
+"price":5,
+"owner_id":"1",
+"loves":10
+},
+{
+"id":"2",
+"name": "Chocko Banana",
+"shape_id": "1",
+"size":60,
+"receipe":[
+    {
+        "ingrediend_id" :"3",
+        "amount":2
+    },{
+        "ingrediend_id" :"2",
+        "amount":3
+    }
+],
+"description":"Madagascar Chocolate with Banana",
+"price":5,
+"owner_id":"1",
+"loves":10
+}
+]
