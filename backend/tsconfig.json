@@ -8,6 +8,6 @@
     "baseUrl": ".",
     "resolveJsonModule": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "../routes/RoutingFunctions.ts"]
 }
 

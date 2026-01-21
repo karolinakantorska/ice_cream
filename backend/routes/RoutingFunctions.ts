@@ -1,6 +1,6 @@
 import {Response, Request} from "express"
-import mock_ices from "./mock_ices.json"
-import { ApiResponse, IceCream } from "./TS";
+import mock_ices from "../backend/src/mock_ices.json"
+import { ApiResponse, IceCream } from "../backend/src/TS";
 
 export const getIceCreams =(req: Request, res: Response<ApiResponse<IceCream[]>>) => {
   res
