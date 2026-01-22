@@ -1,12 +1,12 @@
 import express, {Response, Request} from "express"
 
-import { iceCreamRoutes } from "routes/iceCreamRoutes";
+import router from "./routes/iceCreamRoutes";
 
 const app = express()
 
 app.use(express.json())
 
-app.use("/api/v1/ice_creams", iceCreamRoutes)
+app.use("/api/v1/ice_creams", router)
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Ice Cream Backend!");

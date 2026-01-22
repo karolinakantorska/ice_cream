@@ -1,16 +1,20 @@
 import { Router } from "express"
-import { createIceCream, deleteIceCream, getIceCream, getIceCreams, updateIceCream } from "./RoutingFunctions";
+import { checkId, createIceCream, deleteIceCream, getIceCream, getIceCreams, requireBody, updateIceCream, validateIceCreamBody } from "./RoutingFunctions";
 
-export const iceCreamRoutes = Router();
+const router = Router()
 
-iceCreamRoutes.route('/')
+router.param('id', checkId)
+
+router.route('/')
     .get(getIceCreams)
-    .post(createIceCream)
+    .post(requireBody,validateIceCreamBody, createIceCream)
 
-iceCreamRoutes.route('/:id')
+router.route('/:id')
     .get(getIceCream)
-    .patch(updateIceCream)
+    .patch(requireBody,updateIceCream)
     .delete(deleteIceCream)
+
+export default router
 
 //app.get("/api/v1/ice_creams",getIceCreams );
 // optional param: /api/v1/ice_creams/:id/:x?
