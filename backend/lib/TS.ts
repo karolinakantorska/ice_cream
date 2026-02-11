@@ -1,5 +1,7 @@
-import {Response, Request} from "express"
 
+export interface AppError extends Error {
+  status?: number;
+}
 interface Recipe {
   ingrediend_id: string;
   amount: number;
